@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="80.184" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="To validate the Luma E-Commerce Site" name="To validate the Luma site - Example #1.1" time="80.011">
+<testsuite name="Cucumber" time="107.573" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="To validate the Luma E-Commerce Site" name="To validate the Luma site - Example #1.1" time="107.209">
 <system-out><![CDATA[
 Given User shuold be in HomePage of the Luma E-Commerce Site................passed
 When User should click the SignIn and Login using valid "koki.nataraj@gmail.com" and "Sam@2020".passed
@@ -13,4 +13,3 @@ Then Take a screenshot of the Empty cart....................................pass
 ]]></system-out>
 </testcase>
 </testsuite>
-

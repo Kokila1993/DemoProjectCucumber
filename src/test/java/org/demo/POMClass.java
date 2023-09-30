@@ -1,10 +1,14 @@
 package org.demo;
 
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class POMClass extends BaseClassAll {
 	
@@ -129,6 +133,75 @@ public class POMClass extends BaseClassAll {
 		return accept;
 	}
 	
-	
+	public void LumaOperations(String User, String Pass, String text) {
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		
+		WebElement signIn2 = getSignIn();
+		signIn2.click();
+		
+		WebElement userName2 = getUserName();
+		userName2.sendKeys(User);
+		
+		WebElement passWord2 = getPassWord();
+		passWord2.sendKeys(Pass);
+		
+		WebElement button2 = getButton();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(button2));
+		
+		button2.click();
+		
+		WebElement shop2 = getShop();
+		shop2.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		
+		WebElement yoga2 = getYoga();
+		yoga2.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+
+		WebElement size2 = getSize();
+		size2.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+
+		WebElement colour2 = getColour();
+		colour2.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+
+		WebElement number2 = getNumber();
+		number2.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		
+		WebElement number3 = getNumber();
+		number3.clear();
+		number3.sendKeys(text);
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		
+		WebElement addToCart2 = getAddToCart();
+		addToCart2.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+
+		WebElement myCart2 = getMyCart();
+		myCart2.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+
+		WebElement deleteCart2 = getDeleteCart();
+		deleteCart2.click();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+
+		WebElement accept2 = getAccept();
+		accept2.click();
+		
+	}
 
 }	
